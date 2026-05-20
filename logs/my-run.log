@@ -1,0 +1,33 @@
+make: Nothing to be done for `all'.
+== 1. Known answer tests ==
+[PASS] input=""
+expected: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+actual  : e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+[PASS] input="abc"
+expected: ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+actual  : ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+
+[PASS] input="hello FIT4012 SHA"
+expected: e942ae0ecb44fe48e1490144162fc64e9c3c6c399bb4e2d686532195cdc3eae6
+actual  : e942ae0ecb44fe48e1490144162fc64e9c3c6c399bb4e2d686532195cdc3eae6
+
+== 2. Hash string ==
+e942ae0ecb44fe48e1490144162fc64e9c3c6c399bb4e2d686532195cdc3eae6
+== 3. File integrity ==
+[PASS] File integrity OK
+SHA-256: 5ee62dc925a9958dbd6732c570a23c7f65a8c11066e889b15068cfb4bf1a0bd9
+[FAIL] File was changed or expected hash is incorrect
+expected: 5ee62dc925a9958dbd6732c570a23c7f65a8c11066e889b15068cfb4bf1a0bd9
+actual  : c232e5627e703ee5b311e0df8520b3d10dc8867b27636bb58fe58eb1fb9d6acb
+[PASS] Tamper case detected
+== 4. Password hash ==
+[PASS] Password hash saved to test_password.hash
+[PASS] Login success
+[FAIL] Login failed: wrong password
+[PASS] Wrong password rejected
+== 5. Salted password hash ==
+[PASS] Salted password hash saved to test_password_salted_1.hash
+[PASS] Salted password hash saved to test_password_salted_2.hash
+[PASS] Login success
+[PASS] Same password produced different salted records
